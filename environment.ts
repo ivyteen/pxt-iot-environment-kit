@@ -193,6 +193,7 @@ namespace Environment {
      * @param vLED describe parameter here, eg: DigitalPin.P16
      * @param vo describe parameter here, eg: AnalogPin.P1
      */
+    //% advanced=true
     //% blockId="readdust" block="value of dust(μg/m³) at LED %vLED| out %vo"
     export function ReadDust(vLED: DigitalPin, vo: AnalogPin): number {
         let voltage = 0;
@@ -223,6 +224,7 @@ namespace Environment {
      * @param distance_unit describe parameter here, eg: 1
      * @param pin describe parameter here, eg: DigitalPin.P16
      */
+    //% advanced=true
     //% blockId=readsonarbit block="Ultrasonic distance in unit %distance_unit |at|pin %pin"
     export function sonarbit_distance(distance_unit: Distance_Unit, pin: DigitalPin): number {
 
@@ -263,6 +265,7 @@ namespace Environment {
      * get TMP36 Temperature(℃)
      * @param temppin describe parameter here, eg: AnalogPin.P1
      */
+    //% advanced=true
     //% blockId="readtemp" block="read temperature(℃) at pin %temppin"
 
     /*
@@ -361,9 +364,9 @@ namespace Environment {
 
     /**
      * get pm2.5 value (μg/m³) 
-     * @param pm25pin describe parameter here, eg: DigitalPin.P14
+     * @param pm25pin describe parameter here, eg: DigitalPin.P1
      */
-    //% advanced=true
+    //% advanced=false
     //% blockId="readpm25" block="value of pm2.5(μg/m³) at pin %pm25pin"
     export function ReadPM25(pm25pin: DigitalPin): number {
         let pm25 = 0
@@ -383,9 +386,9 @@ namespace Environment {
 
     /**
      * get pm10 value (μg/m³) 
-     * @param pm10pin describe parameter here, eg: DigitalPin.P13     
+     * @param pm10pin describe parameter here, eg: DigitalPin.P2     
      */
-    //% advanced=true
+    //% advanced=false
     //% blockId="readpm10" block="value of pm10(μg/m³) at pin %pm10pin"
     export function ReadPM10(pm10pin: DigitalPin): number {
         let pm10 = 0
@@ -408,6 +411,7 @@ namespace Environment {
      * get soil moisture value (0~100)
      * @param soilmoisturepin describe parameter here, eg: AnalogPin.P1
      */
+    //% advanced=true
     //% blockId="readsoilmoisture" block="value of soil moisture(0~100) at pin %soilhumiditypin"
     export function ReadSoilHumidity(soilmoisturepin: AnalogPin): number {
         let voltage = 0;
@@ -428,6 +432,7 @@ namespace Environment {
      * get light intensity value (0~100)
      * @param lightintensitypin describe parameter here, eg: AnalogPin.P1
      */
+    //% advanced=true
     //% blockId="readlightintensity" block="value of light intensity(0~100) at pin %lightintensitypin"
     export function ReadLightIntensity(lightintensitypin: AnalogPin): number {
         let voltage = 0;
@@ -448,6 +453,7 @@ namespace Environment {
      * get water level value (0~100)
      * @param waterlevelpin describe parameter here, eg: AnalogPin.P1
      */
+    //% advanced=true
     //% blockId="readWaterLevel" block="value of water level(0~100) at pin %waterlevelpin"
     export function ReadWaterLevel(waterlevelpin: AnalogPin): number {
         let voltage = 0;
@@ -491,6 +497,7 @@ namespace Environment {
      * get noise value (dB)
      * @param noisepin describe parameter here, eg: AnalogPin.P1
      */
+    //% advanced=true
     //% blockId="readnoise" block="value of noise(dB) at pin %noisepin"
     export function ReadNoise(noisepin: AnalogPin): number {
         let level = 0
@@ -602,6 +609,7 @@ namespace Environment {
         return Math.round(noise)
     }
 
+    //% advanced=true
     //% block="value of BME280 %state"
     export function octopus_BME280(state: BME280_state): number {
         switch (state) {
