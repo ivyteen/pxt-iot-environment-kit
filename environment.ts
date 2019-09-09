@@ -376,7 +376,7 @@ namespace Environment {
         }
         pm25 = input.runningTimeMicros() - pm25
         pm25 = pm25 / 1000 - 2
-        return Math.round(pm25*100)/100;
+        return Math.round(pm25);
     }
 
 
@@ -398,7 +398,7 @@ namespace Environment {
         }
         pm10 = input.runningTimeMicros() - pm10
         pm10 = pm10 / 1000 - 2
-        return Math.round(pm10 * 100)/100;
+        return Math.round(pm10);
     }
 
 
